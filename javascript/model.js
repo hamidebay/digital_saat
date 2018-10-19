@@ -10,11 +10,21 @@ let minutes = date.getMinutes();
 let seconds = date.getSeconds();
 let miliSeconds = date.getMilliseconds();
 
-function showTime() {
+function update(){
+    date = new Date();
+    hours = date.getHours();
+    minutes = date.getMinutes();
+    seconds = date.getSeconds();
+    miliSeconds = date.getMilliseconds(); 
+}
 
+function showTime() {
+    update();
     let time = hours + ":" + checkTime(minutes) + minutes + ":" + checkTime(seconds) + seconds + ":" + miliSeconds;
     return time;
 }
+
+
 
 function checkTime(i) {
     if (i < 10) {

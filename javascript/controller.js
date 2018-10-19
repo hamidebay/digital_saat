@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    setInterval(getTime, 1000);
-    setInterval(showEpochValue, 1000);  
+    
     function getTime(){
         $("#time-display").html(showTime());
     } 
@@ -29,5 +28,8 @@ $(document).ready(function () {
     $(function () {
         $("#draggable").draggable();
     });
+
+    setInterval(getTime, 1000);
+    setInterval(showEpochValue, 1000); 
 
 });
